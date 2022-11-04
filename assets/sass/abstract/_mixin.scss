@@ -1,0 +1,48 @@
+@mixin img {
+  width: $full;
+  object-fit: contain;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-aligned {
+  @include flex;
+  align-items: center;
+}
+@mixin flex-allCenter {
+  @include flex-aligned;
+  justify-content: center;
+}
+@mixin flex-aligned-justEnd {
+  @include flex-aligned;
+  justify-content: end;
+}
+@mixin flex-aligned-spc-arround {
+  @include flex-aligned;
+  justify-content: space-around;
+}
+@mixin flex-aligned-spc-evenly {
+  @include flex-aligned;
+  justify-content: space-evenly;
+}
+@mixin flex-aligned-spc-btw {
+  @include flex-aligned;
+  justify-content: space-between;
+}
+@mixin box {
+  width: $full;
+  box-sizing: border-box;
+}
+@mixin box-data {
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@mixin normal-font {
+  font-size: $txt18;
+  line-height: $txt22;
+  letter-spacing: -0.36px;
+  color: $black1;
+}

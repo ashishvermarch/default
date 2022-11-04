@@ -1,0 +1,602 @@
+@import "./sass/abstract/constant";
+@import "./sass/abstract/mixin";
+@import "./sass/abstract/variable";
+@import "./sass/base/typography";
+
+@import url("http://fonts.cdnfonts.com/css/neo-sans-pro");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $Neo;
+}
+.wrapper {
+  @include box;
+  .nav-container {
+    @include flex-aligned;
+
+    padding-left: 10%;
+    height: 5vw;
+    font-size: 0.94vw;
+    @include box;
+    .logo {
+      width: 8.5vw;
+      height: 2.08vw;
+      img {
+        @include img;
+      }
+    }
+    .navs {
+      @include flex-aligned;
+      margin: 0 6% 0 8%;
+      a {
+        @include flex-aligned;
+        margin: 0 2.08vw;
+        color: $black1;
+        text-decoration: none;
+      }
+    }
+    .user {
+      @include flex-aligned-justEnd;
+      width: 30%;
+
+      a {
+        color: $black1;
+        text-decoration: none;
+      }
+      .dp {
+        width: 3.02vw;
+        height: 3.02vw;
+        margin: 0 1rem 0 2rem;
+        img {
+          @include img;
+        }
+      }
+      .links {
+        a {
+          margin: 0 5px;
+          color: $sky;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .banner {
+    width: $full;
+    color: $white1;
+    background: transparent url("./png/Banner\ Images-01.png") 0% 0% no-repeat
+      padding-box;
+    background-size: 100% 100%;
+    opacity: 1;
+    padding-bottom: 20%;
+    &-square {
+      // height: 19.6vw;
+      width: 40%;
+      position: relative;
+      // background: transparent
+      //   linear-gradient(270deg, #f37021 0%, #00142200 100%) 0% 0% no-repeat
+      //   padding-box;
+      opacity: 1;
+      left: 0;
+      top: 8.33vw;
+
+      .head {
+        font-size: 2.29vw;
+        padding: 25px 15% 0 20%;
+        line-height: 2.8vw;
+        margin-bottom: 1.3vw;
+      }
+      .desc {
+        padding: 0 15% 0 20%;
+        font-size: 0.94vw;
+        line-height: 1.14vw;
+        margin-bottom: 1.6vw;
+      }
+
+      button {
+        width: 19.8vw;
+        background: $sky 0% 0% no-repeat padding-box;
+        border: 3px solid $orange1;
+        opacity: 1;
+        font-size: 1.25vw;
+        line-height: 1.5vw;
+        padding: 0.5vw 1vw;
+        color: $white1;
+        margin-left: 20%;
+      }
+    }
+    .popUp {
+      width: 39vw;
+      height: 28vw;
+      background: #dbdbdb 0% 0% no-repeat padding-box;
+      opacity: 0.9;
+      position: absolute;
+      right: 17%;
+      top: 7%;
+      padding: 30px 15px;
+      .register {
+        font-weight: bold;
+        letter-spacing: 0px;
+        line-height: 29px;
+        color: $sky;
+        opacity: 1;
+      }
+      .popUp-links {
+        width: $full;
+        @include flex-aligned-spc-btw;
+        text-align: left;
+        font: normal normal normal 16px/19px Neo Sans Pro;
+        letter-spacing: 0px;
+        color: $sky;
+        opacity: 1;
+        .already {
+          color: $black1;
+          span {
+            a {
+              color: $sky;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about {
+    @include box;
+    &-data {
+      @include box-data;
+      div:first-child[class="head"] {
+        @include flex;
+        font-size: 2.5vw;
+        line-height: 2.96vw;
+        padding: 1.75vw 0 0;
+        letter-spacing: -0.96px;
+        span {
+          hr {
+            width: 130%;
+            background: $orange1 0 0 no-repeat padding-box;
+            opacity: 1;
+            padding: 1px;
+          }
+        }
+      }
+      .para {
+        padding: 0vw 0 $wd35;
+        @include normal-font;
+      }
+      &-links {
+        @include flex-aligned;
+        .link {
+          font-weight: 300;
+          font-size: $txt18;
+          line-height: $txt22;
+          letter-spacing: 0;
+          color: $black1;
+          padding: 5px 1.04vw;
+          cursor: pointer;
+          border: 1px solid $sky;
+          display: inline;
+        }
+        .active {
+          background-color: $sky;
+          opacity: 0.6;
+          font-weight: 500;
+          color: $white1;
+          letter-spacing: -0.18px;
+        }
+      }
+      .padBtm {
+        padding-bottom: $wd26;
+      }
+      .description {
+        @include box;
+        @include flex;
+        &-textpart {
+          width: 60%;
+          .para {
+            padding: 1.35vw 0 0.9vw;
+            @include normal-font;
+          }
+          .points {
+            @include flex-aligned;
+            padding-bottom: $wd32;
+            .serial {
+              border: 2px solid $orange1;
+              height: $wd38;
+              width: $wd38;
+              min-width: $wd38;
+              @include normal-font;
+              @include flex-allCenter;
+            }
+            .details {
+              padding-left: $wd24;
+              @include normal-font;
+              letter-spacing: 0;
+              span {
+                font-weight: 500;
+              }
+            }
+          }
+
+          .tableContainer {
+            max-height: $wd400;
+            overflow: auto;
+            table {
+              width: $full;
+              // text-align: center;
+              border-collapse: separate;
+              border-spacing: 0px;
+              border-color: $gray;
+              color: $black1;
+              font-size: $txt16;
+              border: 1px solid $gray2;
+
+              th {
+                background-color: $gray1;
+                color: $white2;
+                padding: 6px $wd16;
+                font-size: $txt18;
+                line-height: $txt22;
+                text-align: left;
+
+                &:first-child {
+                  width: $wd20;
+                }
+                &:last-child {
+                  text-align: center;
+                }
+              }
+
+              tr:nth-child(odd) {
+                background-color: $white3;
+              }
+              td {
+                padding: 6px $wd16;
+                border-right: 1px solid $gray2;
+                border-bottom: 1px solid $gray2;
+                a {
+                  img {
+                    width: $wd24;
+                    height: $wd24;
+                  }
+                }
+              }
+              tr {
+                td:last-child {
+                  text-align: center;
+                  border-right: none;
+                }
+              }
+              .noBorder {
+                border-right: none !important;
+              }
+            }
+          }
+        }
+        .fullWd {
+          width: $full !important;
+        }
+        &-video {
+          width: 40%;
+          @include flex-allCenter;
+          video {
+            width: $wd320;
+            height: $wd240;
+          }
+        }
+      }
+    }
+  }
+
+  .highlights {
+    @include box;
+    height: $wd200;
+    background-color: $sky;
+    @include flex-aligned-spc-evenly;
+    .num {
+      font-size: $txt72;
+      line-height: $wd38;
+      color: $white1;
+      text-align: center;
+      div {
+        font-size: $txt32;
+        padding-top: 0.25vw;
+      }
+    }
+  }
+}
+
+// ministries table scss (to be add on tab)
+body {
+  .tableContainer {
+    max-height: $wd400;
+    overflow: auto;
+    table {
+      width: $full;
+      // text-align: center;
+      border-collapse: separate;
+      border-spacing: 0px;
+      border-color: $gray;
+      color: $black1;
+      font-size: $txt16;
+      border: 1px solid $gray2;
+
+      th {
+        background-color: $gray1;
+        color: $white2;
+        padding: 6px $wd16;
+        font-size: $txt18;
+        line-height: $txt22;
+        text-align: left;
+
+        &:first-child {
+          width: $wd20;
+        }
+      }
+
+      tr:nth-child(odd) {
+        background-color: $white3;
+      }
+      td {
+        padding: 6px $wd16;
+        border-right: 1px solid $gray2;
+        border-bottom: 1px solid $gray2;
+        a {
+          img {
+            width: $wd24;
+            height: $wd24;
+          }
+        }
+      }
+    }
+  }
+}
+
+// bootstrap override
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #286ebe !important;
+  opacity: 0.6 !important;
+  font-size: 18px !important;
+  border-radius: 0 !important;
+  padding: 2px 15px !important;
+  color: white !important;
+  font-weight: 800 !important;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0 !important;
+  font-size: 18px !important;
+  border: 1px solid rgb(93, 93, 151) !important;
+  padding: 2px 15px !important;
+  color: black !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: rgb(82, 82, 190) !important ;
+  border-color: #fff #fff #fff !important ;
+  border-bottom: 2px solid rgb(7, 7, 87) !important ;
+  font-weight: 600 !important ;
+  font-size: 18px !important ;
+  opacity: 0.8 !important ;
+}
+
+.nav-tabs .nav-link {
+  color: rgb(153, 140, 138) !important ;
+  font-size: 20px !important ;
+}
+
+.useCases {
+  width: 80%;
+  margin: 30px auto 0;
+  background-image: url("https://goulip.in/static/media/Hexa-bgimge.2c25029c.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: contain;
+}
+
+.ulipHeading {
+  margin: 0px;
+  font-size: 2.5vw;
+  line-height: 2.96vw;
+  padding: 1.75vw 0 0;
+  letter-spacing: -0.96px;
+}
+
+.horizontal {
+  //   border-bottom: 1px solid #f37021;
+  background-color: #f37021;
+  height: 3px;
+  width: 6.7vw;
+  margin-bottom: 12px;
+}
+
+.innerVideo {
+  width: 15%;
+  margin-right: 18%;
+}
+
+.videoContainer {
+  display: flex;
+  //   gap: 50px;
+  margin-top: 2%;
+}
+
+.videoContainer p {
+  text-align: right;
+}
+
+.videoContainer video {
+  border-radius: 7px;
+}
+
+.wallpaper {
+  background-color: #eaeef2;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.wallpaper p {
+  color: rgb(163, 152, 212);
+  font-size: 25px;
+}
+
+.footer-part1 {
+  background-color: rgb(235, 232, 230);
+}
+
+.part1-parent {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0px;
+}
+
+.contactDetails {
+  border: 1px solid #f37021;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 3px 6px rgb(243 112 33 / 30%);
+  border-radius: 5px;
+  margin: 0px 0px 20px 0px;
+}
+
+.contactContainer {
+  display: flex;
+}
+
+.contactContainer img {
+  width: 30px;
+  height: 35px;
+  padding-right: 30px;
+  box-sizing: content-box;
+}
+
+.paragraph {
+  margin: auto;
+  color: #f37021;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.vertical {
+  border-left: 1px solid #f37021;
+  height: 25px;
+  left: 50%;
+}
+
+.companyInfo {
+  display: flex;
+}
+
+.paraDiv {
+  width: 31%;
+  margin-right: 10px;
+}
+
+.paraDiv p,
+.paraDiv a {
+  font-size: 14px;
+}
+
+.paraMargin {
+  margin-bottom: 10px;
+}
+
+.quickLinks {
+  width: 9%;
+}
+
+.adminLinks {
+  width: 20%;
+}
+
+.quickLinks p:first-child,
+.adminLinks p:first-child {
+  margin-bottom: 4px;
+}
+
+.quickLinks a,
+.adminLinks a {
+  text-decoration: none;
+  color: black;
+}
+
+.socialLinks p {
+  padding-bottom: 5px;
+}
+
+.links {
+  display: flex;
+}
+
+#footer-part2 {
+  text-align: center;
+  padding: 16px;
+}
+
+#footer-part2 div {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1160px) {
+  .videoContainer {
+    display: block;
+  }
+  .videoContainer p {
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .contactDetails {
+    display: block;
+    width: initial;
+  }
+
+  .contactContainer {
+    margin-bottom: 5%;
+  }
+
+  .paragraph {
+    margin: 0;
+    font-size: 19px;
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  .companyInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .paraDiv {
+    width: 100%;
+  }
+
+  .quickLinks {
+    width: 20%;
+    margin: 20px 0;
+  }
+
+  .adminLinks {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .paragraph {
+    font-size: 13px;
+  }
+  .useCases {
+    width: 100%;
+  }
+  .videoContainer video {
+    width: 256px;
+  }
+}
